@@ -87,6 +87,7 @@
   display: inline-block;
 }
 .popular > .content > .pop > img {
+  float: left;
   width: 28%;
   height: 10%;
 }

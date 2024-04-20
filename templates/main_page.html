@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>YaStart</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style.css') }}">
+</head>
+<body>
+<header>
+        <div class="header">
+            <div class="logo">
+                <h1>YaStart</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="/sphere">Сферы</a></li>
+                    <li><a href="/main">Главная</a></li>
+                    <li><a href="/bookmark">Закладки</a></li>
+                    <li><a href="/registration_and_login">Войти/Зарегистрироваться</a></li>
+                </ul>
+            </div>
+        </div>
+</header>
+<div class="search">
+    <h1>search</h1>
+</div>
+<div class="noname">
+    <div class="inline">
+        <a href="#"> <img src="{{ url_for('static', filename='style/invest.jpg') }}"/></a>
+    </div>
+    <div class="inline">
+        <a href="#"><img src="{{ url_for('static', filename='style/team.jpg ') }}"/></a>
+    </div>
+    <div class="inline">
+        <a href="#"><img src="{{ url_for('static', filename='style/idea.png ') }}"/></a>
+    </div>
+</div>
+<div class="otrasl">
+    <div class="inline">
+        <a href="#"> <img src="{{ url_for('static', filename='style/IT1.jpg  ') }}"/></a>
+    </div>
+    <div class="inline">
+        <a href="#"><img src="{{ url_for('static', filename='style/med1.jpg ') }}"/></a>
+    </div>
+    <div class="inline">
+        <a href="#"><img src="{{ url_for('static', filename='style/place.jpg ') }}"/></a>
+    </div>
+    <div class="inline">
+        <a href="#"><img src="{{ url_for('static', filename='style/pravo.jpg ') }}"/></a>
+    </div>
+    <div class="inline">
+        <a href="#"><img src="{{ url_for('static', filename='style/trans1.jpg ') }}"/></a>
+    </div>
+    <div class="inline">
+        <a href="#"><img src="{{ url_for('static', filename='style/sciense1.jpg ') }}"/></a>
+    </div>
+</div>
+<div class="popular">
+    <div class="title">
+        <h1>Популярное</h1>
+    </div>
+
+    <div class="content">
+        <div class="pop">
+            <img src="{{ url_for('static', filename='style/startup.jpg ') }}"/>
+            <ul>
+                <li>Название:</li>
+                <li>Бюджет:</li>
+                <li>Краткая информация:</li>
+                <li>Сфера:</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
