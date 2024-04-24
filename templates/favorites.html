@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="style" type="text/css" href="{{ url_for('static', filename='style/logstyle.css') }}">
+    <title>Вход</title>
+</head>
+<body class="w-1154px">
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+        {% for user in photos %}
+            <div class="container-fluid border-1 my-4" style="padding: 0 7rem;">
+                <div class="row align-items-start" id="cont">
+                    <a href="#" style="text-decoration: none; color: #000000;">
+                        <div class="col-6">
+                            <img src="{{ url_for('static', filename=user) }}" style="width: 28rem; float: left;"/>
+                            <ul style="list-style-type: none;">
+                                <li>Название:</li>
+                                <li>Бюджет:</li>
+                                <li>Краткая информация:</li>
+                                <li>Сфера:</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+{% if la > 4 %}
+    <footer>
+        <div class="footer">
+            <div class="logo">
+                <h1 style="float: left;">YaStart</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                    <li><a href="#">Политика обработки персональных данных</a></li>
+                </ul>
+            </div>
+            <div class="up">
+                <a href="/main">Наверх</a>
+            </div>
+            <div class="lis">© 2024 YaStart</div>
+        </div>
+    </footer>
+{% else %}
+    <footer style="position: absolute; left: 0; bottom: 0; width: 100%;">
+        <div class="footer">
+            <div class="logo">
+                <h1 style="float: left;">YaStart</h1>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                    <li><a href="#">Политика обработки персональных данных</a></li>
+                </ul>
+            </div>
+            <div class="up">
+                <a href="/main">Наверх</a>
+            </div>
+            <div class="lis">© 2024 YaStart</div>
+        </div>
+    </footer>
+{% endif %}
+{% endblock %}
+</body>
+</html>

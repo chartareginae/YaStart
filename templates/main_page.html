@@ -8,51 +8,82 @@
 <body>
 {% extends "base.html" %}
 {% block content %}
-<div class="search">
-    <h1>search</h1>
+<div class="input-group rounded my-5" style="width: 156rem; padding: 0 11rem;">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+           aria-describedby="search-addon"/>
+    <button type="button" class="btn" style="background: #770000; width: 3rem;" data-mdb-ripple-init>
+        <i class="glyphicon-search"></i>
+    </button>
 </div>
-<div class="noname">
-    {% set otrasls = ['style/invest1.png', 'style/example.jpg', 'style/example.jpg'] %}
-    {% for photo in otrasls %}
-    <div class="inline">
-        <a href="#"> <img src="{{ url_for('static', filename=photo) }}"/></a>
+<div class="container-fluid">
+    <div class="row align-items-start">
+        {% set otras = ['style/invest1.png', 'style/invest1.png', 'style/invest1.png'] %}
+        {% for ph in otras %}
+        <div class="col-4" align="center">
+            <nav class="inline">
+                <a href="#"> <img src="{{ url_for('static', filename=ph) }}" class="rounded-5"/></a>
+            </nav>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
-<div class="otrasl">
-    {% set otrasls = ['style/IT1.jpg ', 'style/med1.jpg ', 'style/place.jpg ', 'style/pravo.jpg ', 'style/trans1.jpg ',
-    'style/sciense1.jpg '] %}
-    {% for photo in otrasls %}
-    <div class="inline">
-        <a href="#"> <img src="{{ url_for('static', filename=photo) }}"/></a>
+
+
+<div class="container-fluid my-5">
+    <div class="row align-items-start">
+        {% for photo in otrasls %}
+        <div class="col-2" align="center">
+            <a href="#"> <img src="{{ url_for('static', filename=photo) }}"
+                              style="width: 13rem; background: #D9D9D9; border-radius: 15px;"/></a>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
-<div class="popular">
-    <div class="title">
+
+
+<div class="container-fluid my-5">
+    <div class="title" style="display: flex; justify-content: center; margin: 5rem;">
         <h1>Популярное</h1>
     </div>
-    <div class="content">
-        {% set photos = ['style/team.jpg', 'style/pravo.jpg', 'style/startup.jpg', 'style/team.jpg', 'style/pravo.jpg',
-        'style/startup.jpg', 'style/team.jpg', 'style/pravo.jpg', 'style/startup.jpg', 'style/team.jpg',
-        'style/pravo.jpg'] %}
-        <ul>
-            {% for user in photos %}
-            <li>
-                <div class="pop">
-                    <img src="{{ url_for('static', filename=user) }}"/>
-                    <ul>
-                        <li>Название:</li>
-                        <li>Бюджет:</li>
-                        <li>Краткая информация:</li>
-                        <li>Сфера:</li>
-                    </ul>
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+    <div class="container-fluid">
+        {% for user in photos %}
+        <div class="container-fluid border-1 my-4" style="padding: 0 7rem;">
+            <div class="row align-items-start" id="cont">
+                <a href="#" style="text-decoration: none; color: #000000;">
+                    <div class="col-6">
+                        <img src="{{ url_for('static', filename=user) }}" style="width: 28rem; float: left;"/>
+                        <ul style="list-style-type: none;">
+                            <li>Название:</li>
+                            <li>Бюджет:</li>
+                            <li>Краткая информация:</li>
+                            <li>Сфера:</li>
+                        </ul>
+                    </div>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
 </div>
+<footer>
+    <div class="footer">
+        <div class="logo">
+            <h1 style="float: left;">YaStart</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#">О проекте</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Пользовательское соглашение</a></li>
+                <li><a href="#">Политика обработки персональных данных</a></li>
+            </ul>
+        </div>
+        <div class="up">
+            <a href="/main">Наверх</a>
+        </div>
+        <div class="lis">© 2024 YaStart</div>
+    </div>
+</footer>
 {% endblock %}
 
 </body>

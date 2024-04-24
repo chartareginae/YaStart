@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="style" type="text/css" href="{{ url_for('static', filename='style/style.css') }}">
-    <title>Вход</title>
+    <link rel="style" type="text/css" href="{{ url_for('static', filename='style/logstyle.css') }}">
+    <title>Регистрация</title>
 </head>
 <body class="w-1154px">
 {% extends "base.html" %}
@@ -13,17 +13,23 @@
 
 <div class="container my-5 d-flex align-items-center justify-content-center p-0">
     <div class="box my-5 bg-light rounded p-5 text-center">
-        <h1>Вход</h1>
+        <h1>Регистрация</h1>
         <form>
             <div class="form-group my-5">
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                       placeholder="Введите логин или email">
+                       placeholder="Введите логин">
+            </div>
+            <div class="form-group my-5">
+                <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
+                       placeholder="Введите email">
             </div>
             <div class="form-group my-5">
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
             </div>
-            <button type="submit" class="btn text-center" style="color: #ffffff; background: #770000">Войти</button>
-            <button type="submit" class="btn"><a href="/registration" style="text-decoration: none; color: #000000;">Зарегистрироваться</a></button>
+            <div class="form-group my-5">
+                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Повторите пароль">
+            </div>
+            <button type="submit" class="btn text-center" style="color: #ffffff; background: #770000">Зарегистрироваться</button>
         </form>
     </div>
 </div>
