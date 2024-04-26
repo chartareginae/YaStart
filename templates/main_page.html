@@ -8,32 +8,25 @@
 <body>
 {% extends "base.html" %}
 {% block content %}
-<div class="input-group rounded my-5" style="width: 156rem; padding: 0 11rem;">
-    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-           aria-describedby="search-addon"/>
-    <button type="button" class="btn" style="background: #770000; width: 3rem;" data-mdb-ripple-init>
-        <i class="glyphicon-search"></i>
-    </button>
-</div>
-<div class="container-fluid">
+<div class="container-fluid my-5">
     <div class="row align-items-start">
-        {% set otras = ['style/invest1.png', 'style/invest1.png', 'style/invest1.png'] %}
+        {% set otras = ['style/idea1.jpg', 'style/teamdream.jpg', 'style/invest2.jpg'] %}
         {% for ph in otras %}
         <div class="col-4" align="center">
             <nav class="inline">
-                <a href="#"> <img src="{{ url_for('static', filename=ph) }}" class="rounded-5"/></a>
+                <a href="/first"> <img src="{{ url_for('static', filename=ph) }}" class="rounded-5"/></a>
             </nav>
         </div>
         {% endfor %}
     </div>
 </div>
 
-
+{% set links = ['/IT', '/med', '/construction', '/pravo', '/transport', '/science'] %}
 <div class="container-fluid my-5">
     <div class="row align-items-start">
         {% for photo in otrasls %}
         <div class="col-2" align="center">
-            <a href="#"> <img src="{{ url_for('static', filename=photo) }}"
+            <a href="{{links[loop.index - 1]}}"> <img src="{{ url_for('static', filename=photo) }}"
                               style="width: 13rem; background: #D9D9D9; border-radius: 15px;"/></a>
         </div>
         {% endfor %}
@@ -46,17 +39,17 @@
         <h1>Популярное</h1>
     </div>
     <div class="container-fluid">
-        {% for user in photos %}
+        {% for user in info %}
         <div class="container-fluid border-1 my-4" style="padding: 0 7rem;">
             <div class="row align-items-start" id="cont">
-                <a href="#" style="text-decoration: none; color: #000000;">
+                <a href="/startupp" style="text-decoration: none; color: #000000;" id="{{info[loop.index0][5]}}">
                     <div class="col-6">
-                        <img src="{{ url_for('static', filename=user) }}" style="width: 28rem; float: left;"/>
+                        <img src="{{ url_for('static', filename='style/fon.jpg') }}" style="width: 28rem; float: left;"/>
                         <ul style="list-style-type: none;">
-                            <li>Название:</li>
-                            <li>Бюджет:</li>
-                            <li>Краткая информация:</li>
-                            <li>Сфера:</li>
+                            <li>Название: {{info[loop.index0][0]}}</li>
+                            <li>Бюджет: {{info[loop.index0][1]}}</li>
+                            <li>Краткая информация: {{info[loop.index0][3]}}</li>
+                            <li>Сфера: {{info[loop.index0][2]}}</li>
                         </ul>
                     </div>
                 </a>
@@ -79,9 +72,8 @@
             </ul>
         </div>
         <div class="up">
-            <a href="/main">Наверх</a>
+            <a href="/main" style="float: right;">Наверх</a>
         </div>
-        <div class="lis">© 2024 YaStart</div>
     </div>
 </footer>
 {% endblock %}

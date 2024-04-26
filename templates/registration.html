@@ -14,22 +14,21 @@
 <div class="container my-5 d-flex align-items-center justify-content-center p-0">
     <div class="box my-5 bg-light rounded p-5 text-center">
         <h1>Регистрация</h1>
-        <form>
+        <form action="/hello" method="post">
             <div class="form-group my-5">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                       placeholder="Введите логин">
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите логин" name="log">
             </div>
             <div class="form-group my-5">
                 <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
-                       placeholder="Введите email">
+                       placeholder="Введите email" name="email">
             </div>
             <div class="form-group my-5">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль" name="pass1">
             </div>
             <div class="form-group my-5">
-                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Повторите пароль">
+                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Повторите пароль" name="pass2">
             </div>
-            <button type="submit" class="btn text-center" style="color: #ffffff; background: #770000">Зарегистрироваться</button>
+            <input type="submit" class="btn text-center" style="color: #ffffff; background: #770000" placeholder="Зарегистрироваться">
         </form>
     </div>
 </div>

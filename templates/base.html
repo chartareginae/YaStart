@@ -16,10 +16,12 @@
         </div>
         <div class="nav">
             <ul>
-                <li><a href="/sphere">Сферы</a></li>
-                <li><a href="/main">Главная</a></li>
-                <li><a href="/favorites">Закладки</a></li>
-                <li><a href="/login">Войти/Зарегистрироваться</a></li>
+                {% for name in listt %}
+                <li><a href='{{name[1]}}'>{{name[0]}}</a></li>
+<!--                <li><a href="/main">Главная</a></li>-->
+<!--                <li><a href="/favorites">Закладки</a></li>-->
+<!--                <li><a href="/login">Войти/Зарегистрироваться</a></li>-->
+                {% endfor %}
             </ul>
         </div>
     </div>
