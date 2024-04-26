@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="style" type="text/css" href="{{ url_for('static', filename='style/style.css') }}">
-    <title>Вход</title>
+    <title>О проекте</title>
 </head>
 <body class="w-1154px">
 {% extends "base.html" %}
@@ -13,18 +13,14 @@
 
 <div class="container my-5 d-flex align-items-center justify-content-center p-0">
     <div class="box my-5 bg-light rounded p-5 text-center">
-        <h1>Вход</h1>
-        <form action="/hell" method="post">
-            <div class="form-group my-5">
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                       placeholder="Введите логин или email" name="log">
-            </div>
-            <div class="form-group my-5">
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Введите пароль" name="pass">
-            </div>
-            <input type="submit" class="btn text-center" style="color: #ffffff; background: #770000" placeholder="Войти">
-            <button type="submit" class="btn"><a href="/registration" style="text-decoration: none; color: #000000;">Зарегистрироваться</a></button>
-        </form>
+        <h1>О проекте</h1>
+        <p>
+            YaStart - сайт для поиска стартапов, инвесторов и команды. Здесь Вы можете найти проект,
+            который захотите развивать, и команду, с которой захотите работать. Данный проект создан
+            учениками Яндекс Лицея в учебных целях. Сайт постоянно развивается, появляется новый функционал.
+            Если у Вас есть предложения по улучшению работы сайта и/или добавлению полезных и нужных для работы
+            функций, пишите на почту: bma4117@ya.ru или в телеграмм: @chartareginae
+        </p>
     </div>
 </div>
 <footer style="position: absolute; left: 0; bottom: 0; width: 100%; color: #ffffff;">
@@ -40,7 +36,7 @@
             </ul>
         </div>
         <div class="up">
-            <a href="#" style="color: #ffffff;">Наверх</a>
+            <a href="/main" style="color: #ffffff;">Наверх</a>
         </div>
         <div class="lis">© 2024 YaStart</div>
     </div>

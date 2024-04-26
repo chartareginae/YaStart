@@ -21,11 +21,12 @@
                 <div class="row align-items-start" id="cont">
                     <a href="#" style="text-decoration: none; color: #000000;">
                         <div class="col-6">
-                            <img src="{{ url_for('static', filename='style/team1.jpg') }}" style="width: 28rem; float: left;"/>
+                            <img src="{{ url_for('static', filename='style/fon.jpg') }}" style="width: 28rem; float: left;"/>
                             <ul style="list-style-type: none;">
                                 <li>Название: {{info[loop.index0][0]}}</li>
                                 <li>Бюджет: {{info[loop.index0][1]}}</li>
-                                <li>Краткая информация: {{info[loop.index0][2]}}</li>
+                                <li>Краткая информация: {{info[loop.index0][3]}}</li>
+                                <li>Сфера: {{info[loop.index0][2]}}</li>
                             </ul>
                         </div>
                     </a>
@@ -48,7 +49,7 @@
             </div>
             <div class="nav">
                 <ul>
-                    <li><a href="#">О проекте</a></li>
+                    <li><a href="/about_project">О проекте</a></li>
                     <li><a href="#">Контакты</a></li>
                     <li><a href="#">Пользовательское соглашение</a></li>
                     <li><a href="#">Политика обработки персональных данных</a></li>
@@ -61,21 +62,20 @@
         </div>
     </footer>
 {% else %}
-    <footer style="position: absolute; left: 0; bottom: 0; width: 100%;">
+    <footer style="position: absolute; left: 0; bottom: 0; width: 100%; color: #ffffff;">
         <div class="footer">
             <div class="logo">
                 <h1 style="float: left;">YaStart</h1>
             </div>
             <div class="nav">
                 <ul>
-                    <li><a href="#">О проекте</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="/about_project">О проекте</a></li>
                     <li><a href="#">Пользовательское соглашение</a></li>
                     <li><a href="#">Политика обработки персональных данных</a></li>
                 </ul>
             </div>
             <div class="up">
-                <a href="/main">Наверх</a>
+                <a href="#" style="color: #ffffff;">Наверх</a>
             </div>
             <div class="lis">© 2024 YaStart</div>
         </div>

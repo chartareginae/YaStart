@@ -16,3 +16,4 @@ class Startups(SqlAlchemyBase):
     created_time = sqlalchemy.Column(sqlalchemy.DateTime,
                                      default=datetime.datetime.now)
     person = sqlalchemy.Column(sqlalchemy.String, nullable=True)
+    state = sqlalchemy.Column(sqlalchemy.String, nullable=True)

@@ -36,8 +36,8 @@ def appi():
 
 
 def main():
-    db_session.global_init("db/normal_new_db.db")
-    appi()
+    db_session.global_init("db/normal_db.db")
+    # appi()
     app.run()
 
 

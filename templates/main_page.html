@@ -11,10 +11,11 @@
 <div class="container-fluid my-5">
     <div class="row align-items-start">
         {% set otras = ['style/idea1.jpg', 'style/teamdream.jpg', 'style/invest2.jpg'] %}
+        {% set links = ['/idea', '/team', '/invest'] %}
         {% for ph in otras %}
         <div class="col-4" align="center">
             <nav class="inline">
-                <a href="/first"> <img src="{{ url_for('static', filename=ph) }}" class="rounded-5"/></a>
+                <a href="{{links[loop.index0]}}"> <img src="{{ url_for('static', filename=ph) }}" class="rounded-5"/></a>
             </nav>
         </div>
         {% endfor %}
@@ -42,7 +43,7 @@
         {% for user in info %}
         <div class="container-fluid border-1 my-4" style="padding: 0 7rem;">
             <div class="row align-items-start" id="cont">
-                <a href="/startupp" style="text-decoration: none; color: #000000;" id="{{info[loop.index0][5]}}">
+                <a href="#" style="text-decoration: none; color: #000000;" id="{{info[loop.index0][5]}}">
                     <div class="col-6">
                         <img src="{{ url_for('static', filename='style/fon.jpg') }}" style="width: 28rem; float: left;"/>
                         <ul style="list-style-type: none;">
@@ -59,20 +60,19 @@
     </div>
 </div>
 <footer>
-    <div class="footer">
+    <div class="footer" style=" color: #ffffff;">
         <div class="logo">
             <h1 style="float: left;">YaStart</h1>
         </div>
         <div class="nav">
             <ul>
-                <li><a href="#">О проекте</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="/about_project">О проекте</a></li>
                 <li><a href="#">Пользовательское соглашение</a></li>
                 <li><a href="#">Политика обработки персональных данных</a></li>
             </ul>
         </div>
         <div class="up">
-            <a href="/main" style="float: right;">Наверх</a>
+            <a href="/main" style="float: right; color: #ffffff;">Наверх</a>
         </div>
     </div>
 </footer>

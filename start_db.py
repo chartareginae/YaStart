@@ -6,7 +6,7 @@ app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
 
 def main():
-    db_session.global_init("db/normal_new_db.db")
+    db_session.global_init("db/normal_db.db")
     app.run()
 
 

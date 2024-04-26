@@ -18,27 +18,16 @@
         <h1>Новый стартап</h1>
         <form action="/new_startt" method="post">
             <div class="form-group my-5">
-                <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Вставьте ссылку на фото" name="url">
+                <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Введите название" name="title">
             </div>
             <div class="form-group my-5">
-                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите название"
-                       name="title">
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите статус: собрана команда, есть идея, инвестируется"
+                       name="status">
             </div>
             <div class="form-group my-5">
                 <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
                        placeholder="Введите бюджет" name="budget">
             </div>
-<!--            <form class="dropdown" name="spheree">-->
-<!--                <select style="width: 50rem; height: 2rem;">-->
-<!--                    <option value='sphere'>Сфера</option>-->
-<!--                    <option value='var1'>Интернет-проекты, приложения</option>-->
-<!--                    <option value='var2'>Здоровье, медицина, фармацевтика</option>-->
-<!--                    <option value='var3'>Недвижимость, строительство, ремонт</option>-->
-<!--                    <option value='var4'>Финансы, управление, право</option>-->
-<!--                    <option value='var5'>Транспорт, топливо, логистика</option>-->
-<!--                    <option value='var6'>Наука, образование, кульура</option>-->
-<!--                </select>-->
-<!--            </form>-->
             <div class="form-group my-5">
                 <input type="text" class="form-control" id="sph1"
                        placeholder="Номер сферы: 1 - IT, 2 - медицина, 3 - строительство, 4 - право, 5 - транспорт, 6 - наука" name="sph">
@@ -55,23 +44,22 @@
         </form>
     </div>
 </div>
-<footer style="position: absolute; left: 0; bottom: 0; width: 100%;">
+<footer style="position: absolute; left: 0; bottom: 0; width: 100%; color: #ffffff;">
     <div class="footer">
         <div class="logo">
             <h1 style="float: left;">YaStart</h1>
         </div>
         <div class="nav">
             <ul>
-                <li><a href="#">О проекте</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="/about_project">О проекте</a></li>
                 <li><a href="#">Пользовательское соглашение</a></li>
                 <li><a href="#">Политика обработки персональных данных</a></li>
             </ul>
         </div>
         <div class="up">
-            <a href="/main">Наверх</a>
+            <a href="/main" style="color: #ffffff;">Наверх</a>
         </div>
-        <div class="lis">© 2024 YaStart</div>
+        <div class="lis" style="margin-right: 0;">© 2024 YaStart</div>
     </div>
 </footer>
 {% endblock %}
